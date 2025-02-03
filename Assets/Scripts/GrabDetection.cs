@@ -6,9 +6,11 @@ public class GrabDetection : MonoBehaviour
 {
     private XRGrabInteractable grabInteractable;
     private bool isGrabbed = false;
+    [SerializeField] private Rigidbody _rigidbody;
 
     void Awake()
     {
+        _rigidbody = GetComponent<Rigidbody>();
         grabInteractable = GetComponent<XRGrabInteractable>();
         if (grabInteractable != null)
         {
@@ -27,6 +29,7 @@ public class GrabDetection : MonoBehaviour
     {
         isGrabbed = false;
         Debug.Log(gameObject.name + " was released!");
+        _rigidbody.isKinematic = false;
     }
 
     public bool IsObjectGrabbed()
