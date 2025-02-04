@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Anchor
   - Gem Slot
+  - Bullet
   layers:
   - Default
   - TransparentFX

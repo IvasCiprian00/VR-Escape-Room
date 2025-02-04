@@ -4,9 +4,9 @@ using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 public class GrabDetection : MonoBehaviour
 {
-    private XRGrabInteractable grabInteractable;
-    private bool isGrabbed = false;
-    [SerializeField] private Rigidbody _rigidbody;
+    protected XRGrabInteractable grabInteractable;
+    protected bool isGrabbed = false;
+    [SerializeField] protected Rigidbody _rigidbody;
 
     void Awake()
     {
@@ -19,13 +19,13 @@ public class GrabDetection : MonoBehaviour
         }
     }
 
-    private void OnGrab(SelectEnterEventArgs args)
+    protected void OnGrab(SelectEnterEventArgs args)
     {
         isGrabbed = true;
         Debug.Log(gameObject.name + " was grabbed!");
     }
 
-    private void OnRelease(SelectExitEventArgs args)
+    protected void OnRelease(SelectExitEventArgs args)
     {
         isGrabbed = false;
         Debug.Log(gameObject.name + " was released!");
