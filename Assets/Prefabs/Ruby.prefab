@@ -9,11 +9,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6566666726452802279}
-  - component: {fileID: 9044260479287387004}
   - component: {fileID: 1482250357413025063}
   - component: {fileID: 2735957839806433384}
   - component: {fileID: 6817276869522425448}
   - component: {fileID: 1935206403849697283}
+  - component: {fileID: 191944578561707428}
+  - component: {fileID: 2035804512172949174}
   m_Layer: 0
   m_Name: Ruby
   m_TagString: Untagged
@@ -31,19 +32,11 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: -0, z: -0.559}
-  m_LocalScale: {x: 0.31057, y: 0.31057, z: 0.31057}
+  m_LocalScale: {x: 0.04265565, y: 0.04265565, z: 0.042655643}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &9044260479287387004
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5095252263185134427}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1482250357413025063
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -259,3 +252,26 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 0
+--- !u!114 &191944578561707428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5095252263185134427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09d1454b57cfcb0438fcee13364a7d30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _initialGemSlot: {fileID: 0}
+  _bookGemSlot: {fileID: 0}
+  _rigidbody: {fileID: 0}
+--- !u!33 &2035804512172949174
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5095252263185134427}
+  m_Mesh: {fileID: 7507904887083721359, guid: 4575fa1ada94ab843a66a0c409f9e509, type: 3}

@@ -5,6 +5,7 @@ using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 public class GemScript : MonoBehaviour
 {
+    public BookScript bookScript;
     private bool _wasGrabbed;
     private bool _wasPlacedInBook;
     [SerializeField] private Transform _initialGemSlot;
@@ -62,6 +63,7 @@ public class GemScript : MonoBehaviour
     {
         if(other.tag == "Gem Slot")
         {
+            bookScript.OnGemPlaced();
             _rigidbody.isKinematic = true;
             GetComponent<SphereCollider>().enabled = false;
             transform.position = other.transform.position;

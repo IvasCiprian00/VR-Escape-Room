@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
+    public Animator safeAnimator;
     public int correctCode;
     public List<PinScript> pinList = new List<PinScript>();
 
@@ -18,7 +19,12 @@ public class UIManager : MonoBehaviour
 
         if(generatedCode == correctCode)
         {
-            Debug.Log("You guessed it right");
+            safeAnimator.SetTrigger("enterCorrectCode");
+        }
+        else
+        {
+            Debug.Log(generatedCode + " " + correctCode);
+            safeAnimator.SetTrigger("enterWrongCode");
         }
     }
 }
