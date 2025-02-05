@@ -13,13 +13,16 @@ public class PaperCluesManager : MonoBehaviour
         int realPaperLocation = Random.Range(0, _spawnLocations.Count);
         for(int i = 0; i < _spawnLocations.Count; i++)
         {
+            GameObject reference;
             if(i == realPaperLocation)
             {
-                Instantiate(_realPaper, _spawnLocations[i].position, Quaternion.identity);
+                reference = Instantiate(_realPaper, _spawnLocations[i].position, Quaternion.identity);
+                reference.transform.eulerAngles = _spawnLocations[i].eulerAngles + new Vector3(90, 0, 0);
                 continue;
             }
 
-            Instantiate(_fakePaper, _spawnLocations[i].position, Quaternion.identity);
+            reference = Instantiate(_fakePaper, _spawnLocations[i].position, _spawnLocations[i].rotation);
+            reference.transform.eulerAngles = _spawnLocations[i].eulerAngles + new Vector3(90, 0, 0);
         }
     }
 }
